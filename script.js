@@ -8,7 +8,7 @@ const swap = document.getElementById("swap");
 function calculate() {
     const currency_one = currencyEl_one.value;
     const currency_two = currencyEl_two.value;
-    const endPoint = "https://v6.exchangerate-api.com/v6/cf0461fd01839d93c79efab3/latest/";
+    const endPoint = "https://v6.exchangerate-api.com/v6/PUT_API_KEY_HERE/latest/";
     fetch(endPoint + currency_one).then(res => res.json()).then(data => {
         let rate = data.conversion_rates[currency_two];
         rateEl.innerHTML = "1 " + currency_one + " = " + rate + " " + currency_two;
